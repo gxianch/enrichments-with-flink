@@ -7,8 +7,8 @@ import lombok.Data;
 @Data
 public class CacheEntry<T> {
 
-	private final long timestamp;
-	private final T cached;
+	private  long timestamp;
+	private  T cached;
 
 	public boolean isExpired(Time timeout) {
 		return System.currentTimeMillis() - timeout.toMilliseconds() < timestamp;
